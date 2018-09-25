@@ -4,7 +4,7 @@ using System.Text;
 
 namespace School.Services
 {
-    class ApiServices
+    public class ApiServices
     {
     }
 }

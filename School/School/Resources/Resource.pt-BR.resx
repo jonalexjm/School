@@ -246,4 +246,34 @@
   <data name="Exit" xml:space="preserve">
     <value>Sessão de perto!</value>
   </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>FirstName</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>LastName</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="PasswordConfirm" xml:space="preserve">
+    <value>PasswordConfirm!</value>
+  </data>
+  <data name="FirstNamePlaceholder" xml:space="preserve">
+    <value>Primeiro nome</value>
+  </data>
+  <data name="LastNamePlaceholder" xml:space="preserve">
+    <value>Sobrenome</value>
+  </data>
+  <data name="PhonePlaceHolder" xml:space="preserve">
+    <value>Digite seu número de telefone</value>
+  </data>
+  <data name="AddressPlaceHolder" xml:space="preserve">
+    <value>Entre com seu endereço…</value>
+  </data>
+  <data name="PasswordConfirmPlaceHolder" xml:space="preserve">
+    <value>Digite sua senha para confirmar</value>
+  </data>
 </root>

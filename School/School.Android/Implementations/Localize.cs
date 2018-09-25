@@ -5,7 +5,8 @@ namespace Colegio.Droid.Implementations
     using System.Globalization;
     using System.Threading;
     using Helpers;
-    using Interfaces;
+    using School.Helpers;
+    using School.Interfaces;
 
     public class Localize : ILocalize
     {

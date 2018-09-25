@@ -88,6 +88,24 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your address....
+        /// </summary>
+        public static string AddressPlaceHolder {
+            get {
+                return ResourceManager.GetString("AddressPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string Cancel {
@@ -223,6 +241,24 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FirstName.
+        /// </summary>
+        public static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your first name....
+        /// </summary>
+        public static string FirstNamePlaceholder {
+            get {
+                return ResourceManager.GetString("FirstNamePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do you forgot your password?.
         /// </summary>
         public static string Forgot {
@@ -255,6 +291,24 @@ namespace School.Resources {
         public static string IsAvailable {
             get {
                 return ResourceManager.GetString("IsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LastName.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your last name....
+        /// </summary>
+        public static string LastNamePlaceholder {
+            get {
+                return ResourceManager.GetString("LastNamePlaceholder", resourceCulture);
             }
         }
         
@@ -313,6 +367,24 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to PasswordConfirm.
+        /// </summary>
+        public static string PasswordConfirm {
+            get {
+                return ResourceManager.GetString("PasswordConfirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your password confirm....
+        /// </summary>
+        public static string PasswordConfirmPlaceHolder {
+            get {
+                return ResourceManager.GetString("PasswordConfirmPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter your password....
         /// </summary>
         public static string PasswordPlaceHolder {
@@ -327,6 +399,24 @@ namespace School.Resources {
         public static string PasswordValidation {
             get {
                 return ResourceManager.GetString("PasswordValidation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string Phone {
+            get {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter your phone number....
+        /// </summary>
+        public static string PhonePlaceHolder {
+            get {
+                return ResourceManager.GetString("PhonePlaceHolder", resourceCulture);
             }
         }
         
