@@ -73,7 +73,7 @@ namespace School.ViewModels
         {
             this.apiService = new ApiServices();
             this.IsEnabled = true;
-            this.ImageSource = "nouser";
+            this.ImageSource = "NoImage";
 
            
         }

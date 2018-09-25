@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Android", "School\Sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.iOS", "School\School.iOS\School.iOS.csproj", "{22060310-B888-49DA-BE23-604A53527C45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School", "School\School\School.csproj", "{A7F24201-ACA4-4893-853C-ED6FA83EDD46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School", "School\School\School.csproj", "{A7F24201-ACA4-4893-853C-ED6FA83EDD46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Backend", "School.Backend\School.Backend.csproj", "{F4512BA7-8DFC-4CDA-9E90-285BF7BC543E}"
 EndProject

@@ -1,4 +1,5 @@
-﻿using School.Views;
+﻿using School.ViewModels;
+using School.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +13,7 @@ namespace School
         {
             InitializeComponent();
 
+            MainViewModel.GetInstance().Register = new RegisterViewModel();
             MainPage = new RegisterPage();
         }
 
