@@ -202,6 +202,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LocalDataContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -281,6 +282,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\School.Common\School.Common.csproj">
+      <Project>{0290046d-e4cf-46a7-8c9b-a94613776b74}</Project>
+      <Name>School.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\School.Domain\School.Domain.csproj">
+      <Project>{68763ba6-65a1-4231-9631-26f7c101f152}</Project>
+      <Name>School.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
