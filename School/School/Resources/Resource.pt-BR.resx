@@ -276,4 +276,28 @@
   <data name="PasswordConfirmPlaceHolder" xml:space="preserve">
     <value>Digite sua senha para confirmar</value>
   </data>
+  <data name="FirstNameError" xml:space="preserve">
+    <value>Nome do primeiro erro!</value>
+  </data>
+  <data name="LastNameError" xml:space="preserve">
+    <value>Sobrenome de erro!</value>
+  </data>
+  <data name="EMailError" xml:space="preserve">
+    <value>E-mail de erro!</value>
+  </data>
+  <data name="PhoneError" xml:space="preserve">
+    <value>Telefone de erro!</value>
+  </data>
+  <data name="PasswordError" xml:space="preserve">
+    <value>Senha de erro!</value>
+  </data>
+  <data name="PasswordConfirmError" xml:space="preserve">
+    <value>senha de confirmação de erro!</value>
+  </data>
+  <data name="PasswordsNoMatch" xml:space="preserve">
+    <value>A senha e a confirmação devem ser iguais.</value>
+  </data>
+  <data name="RegisterConfirmation" xml:space="preserve">
+    <value>O usuário foi criado com sucesso. Agora você pode entrar com o email e a senha atribuída.</value>
+  </data>
 </root>

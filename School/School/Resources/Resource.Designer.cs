@@ -205,6 +205,15 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error Email.
+        /// </summary>
+        public static string EMailError {
+            get {
+                return ResourceManager.GetString("EMailError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter your email....
         /// </summary>
         public static string EmailPlaceHolder {
@@ -246,6 +255,15 @@ namespace School.Resources {
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error first name.
+        /// </summary>
+        public static string FirstNameError {
+            get {
+                return ResourceManager.GetString("FirstNameError", resourceCulture);
             }
         }
         
@@ -300,6 +318,15 @@ namespace School.Resources {
         public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error LastName.
+        /// </summary>
+        public static string LastNameError {
+            get {
+                return ResourceManager.GetString("LastNameError", resourceCulture);
             }
         }
         
@@ -376,6 +403,15 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to error confirmation password.
+        /// </summary>
+        public static string PasswordConfirmError {
+            get {
+                return ResourceManager.GetString("PasswordConfirmError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter your password confirm....
         /// </summary>
         public static string PasswordConfirmPlaceHolder {
@@ -385,11 +421,29 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error password.
+        /// </summary>
+        public static string PasswordError {
+            get {
+                return ResourceManager.GetString("PasswordError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter your password....
         /// </summary>
         public static string PasswordPlaceHolder {
             get {
                 return ResourceManager.GetString("PasswordPlaceHolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password and confirm must be equals..
+        /// </summary>
+        public static string PasswordsNoMatch {
+            get {
+                return ResourceManager.GetString("PasswordsNoMatch", resourceCulture);
             }
         }
         
@@ -408,6 +462,15 @@ namespace School.Resources {
         public static string Phone {
             get {
                 return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error phone.
+        /// </summary>
+        public static string PhoneError {
+            get {
+                return ResourceManager.GetString("PhoneError", resourceCulture);
             }
         }
         
@@ -462,6 +525,15 @@ namespace School.Resources {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user was created successfully. Now you can enter with the email and the assigned password..
+        /// </summary>
+        public static string RegisterConfirmation {
+            get {
+                return ResourceManager.GetString("RegisterConfirmation", resourceCulture);
             }
         }
         
