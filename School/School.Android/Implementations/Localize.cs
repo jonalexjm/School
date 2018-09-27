@@ -4,7 +4,7 @@ namespace Colegio.Droid.Implementations
 {
     using System.Globalization;
     using System.Threading;
-    using Helpers;
+    
     using School.Helpers;
     using School.Interfaces;
 

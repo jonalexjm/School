@@ -76,7 +76,7 @@ namespace School.ViewModels
             this.IsEnabled = true;
             this.ImageSource = "NoImage";
 
-           
+
         }
 
 
@@ -87,8 +87,9 @@ namespace School.ViewModels
 
         #endregion
 
-        #region Commands
 
+
+        #region Commands
         public ICommand SaveCommand
         {
             get
@@ -214,28 +215,17 @@ namespace School.ViewModels
             }
 
             this.IsRunning = false;
-            this.IsEnabled = true;
+            this.IsEnabled = false;
 
             await Application.Current.MainPage.DisplayAlert(
                 Languages.Confirm,
                 Languages.RegisterConfirmation,
                 Languages.Accept);
 
-            await Application.Current.MainPage.Navigation.PopAsync();
+            await Application.Current.MainPage.DisplayAlert("ok", "fuck yeah", Languages.Accept);
         }
 
-
-
-    }
-
-
-
-
-
-
-
-
-    public ICommand ChangeImageCommand
+        public ICommand ChangeImageCommand
         {
             get
             {
@@ -283,10 +273,17 @@ namespace School.ViewModels
                     var stream = this.file.GetStream();
                     return stream;
                 });
-            }
-        }
 
-       
-        #endregion
+
+
+            }
+
+
+
+            #endregion
+
+        }
     }
-}
+
+}  
+

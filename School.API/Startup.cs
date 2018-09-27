@@ -1,7 +1,11 @@
-﻿using Microsoft.Owin;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(School.API.Startup))]
+[assembly: OwinStartup(typeof(School.API.Startup))]
+
 namespace School.API
 {
     public partial class Startup

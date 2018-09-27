@@ -1,11 +1,14 @@
-﻿namespace School.API.Helpers
-{
-    using System.Collections.Generic;
-    using System.Net;
-    using System.Net.Mail;
-    using System.Threading.Tasks;
-    using System.Web.Configuration;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Configuration;
 
+namespace School.API.Helpers
+{
     public class MailHelper
     {
         public static async Task SendMail(string to, string subject, string body)
