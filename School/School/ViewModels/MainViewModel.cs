@@ -1,4 +1,5 @@
-﻿using System;
+﻿using School.Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,11 +16,35 @@ namespace School.ViewModels
 
         public RegisterViewModel Register { get; set; }
 
+        public UserViewModel Users { get; set; }
+
+        public LoginViewModel Login { get; set; }
+
         #endregion
 
 
+        public MyUserASP UserASP { get; set; } // para poder acceder al usuario todo el tiempo
+
+
+
+        public string UserFullName
+        {
+            get
+            {
+                if (UserASP != null && UserASP.Claims != null && UserASP.Claims.Count > 1)
+                {
+                    return $"{UserASP.Claims[0].ClaimValue} {UserASP.Claims[1].ClaimValue}";
+                }
+
+                return null;
+            }
+        }
+
+
+
+
         #region Singleton
-  
+
         public static MainViewModel instance;
 
         public static MainViewModel GetInstance()

@@ -601,6 +601,15 @@ namespace School.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User name.
+        /// </summary>
+        public static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Yes..
         /// </summary>
         public static string Yes {

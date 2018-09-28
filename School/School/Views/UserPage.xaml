@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="School.Views.UserPage"
+             xmlns:i18n="clr-namespace:Colegio.Helpers"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="User" >
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding Users}">
+            <Image
+                x:Name="PhotoImage"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Source="NoUser"/>
+            <Label
+	            FontAttributes="Bold"
+	            FontSize="Large"
+	            HorizontalOptions="Center"
+	            Text="{Binding UserFullName}"
+	            TextColor="White"/>
+
+
+            <Label Text="Welcome"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+
+            <Label x:Name="userNameLabel"                   
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+
+            <Button 
+                    x:Name="myNotes"
+                    BackgroundColor="Navy"
+                    BorderRadius="23"
+                    HeightRequest="46"
+                    Text="My notes"
+                    TextColor="White"              
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"/>
+
+            <Button 
+                    x:Name="myNotesButton"
+                    BackgroundColor="Red"
+                    BorderRadius="23"
+                    HeightRequest="46"
+                    Text="Upload notes"
+                    TextColor="White"               
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"/>
+            <Button
+                    	BackgroundColor="Navy"
+                    	BorderRadius="23"
+                    	Command="{Binding AddUserCommand}"
+                    	HeightRequest="46"
+                    	HorizontalOptions="FillAndExpand"
+                    	
+                    	
+                    	TextColor="White">
+            </Button>
+
+            <Label 
+                   Text="{Binding Prueba}"                   
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -329,6 +329,11 @@ namespace School.Helpers
         {
             get { return Resource.RegisterConfirmation; }
         }
+
+        public static string UserName
+        {
+            get { return Resource.UserName; }
+        }
     }
 
 

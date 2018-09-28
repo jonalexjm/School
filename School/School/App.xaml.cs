@@ -1,4 +1,7 @@
-﻿using School.ViewModels;
+﻿using Newtonsoft.Json;
+using School.Common.Models;
+using School.Helpers;
+using School.ViewModels;
 using School.Views;
 using System;
 using Xamarin.Forms;
@@ -13,8 +16,9 @@ namespace School
         {
             InitializeComponent();
 
-            MainViewModel.GetInstance().Register = new RegisterViewModel();
-            MainPage = new RegisterPage();
+            MainViewModel.GetInstance().Login = new LoginViewModel();
+            MainPage = new LoginPage();
+
         }
 
         protected override void OnStart()

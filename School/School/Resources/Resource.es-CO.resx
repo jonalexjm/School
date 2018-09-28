@@ -300,4 +300,7 @@
   <data name="RegisterConfirmation" xml:space="preserve">
     <value>El usuario fue creado con éxito. Ahora puede ingresar con el correo electrónico y la contraseña asignada.</value>
   </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nombre de usuario</value>
+  </data>
 </root>
