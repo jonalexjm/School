@@ -72,7 +72,7 @@
                         FontSize="15"  />
 
                     <Switch
-                    	
+                    	 IsToggled="{Binding IsRemembered}"
                     	HorizontalOptions="End">
                     </Switch>
                 </StackLayout>

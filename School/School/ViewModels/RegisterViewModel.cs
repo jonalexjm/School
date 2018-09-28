@@ -278,11 +278,11 @@ namespace School.ViewModels
 
             }
 
-
-
-            #endregion
-
         }
+
+        
+
+        #endregion
     }
 
 }  

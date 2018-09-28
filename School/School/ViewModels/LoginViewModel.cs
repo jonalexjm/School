@@ -44,6 +44,12 @@ namespace School.ViewModels
             set { this.SetValue(ref this.isEnabled, value); }
         }
 
+        public bool IsRememember
+        {
+            get;
+            set;
+        }
+
         #endregion
 
         #region Constructor
@@ -56,6 +62,8 @@ namespace School.ViewModels
             this.apiService = new ApiServices();
 
             this.IsEnabled = true;
+
+            this.IsRememember = true;
         }
 
         #endregion
@@ -99,7 +107,7 @@ namespace School.ViewModels
 
             this.IsRunning = true;
             this.IsEnabled = false;
-/**
+
 
 
             var connection = await this.apiService.CheckConnection();
@@ -113,7 +121,7 @@ namespace School.ViewModels
 
             }
 
-     **/      
+          
 
             var url = Application.Current.Resources["UrlAPI"].ToString();
             var token = await this.apiService.GetToken(url, this.Email, this.Password);
@@ -141,14 +149,14 @@ namespace School.ViewModels
             if (response.IsSuccess)
             {
                 var userASP = (MyUserASP)response.Result;
-               MainViewModel.GetInstance().UserASP = userASP;
+               MainViewModel.GetInstance().UserASP = userASP;                           
                Settings.UserASP = JsonConvert.SerializeObject(userASP);
              
             }
 
-            MainViewModel.GetInstance().Register = new RegisterViewModel();
-            Application.Current.MainPage = new RegisterPage();
-    
+            MainViewModel.GetInstance().Users = new UserViewModel();
+            Application.Current.MainPage = new MasterPage();
+
 
         }
 

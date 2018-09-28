@@ -1,6 +1,8 @@
 ﻿using School.Common.Models;
+using School.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace School.ViewModels
@@ -20,27 +22,24 @@ namespace School.ViewModels
 
         public LoginViewModel Login { get; set; }
 
-        #endregion
-
+        public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
         public MyUserASP UserASP { get; set; } // para poder acceder al usuario todo el tiempo
-
-
 
         public string UserFullName
         {
             get
             {
-                if (UserASP != null && UserASP.Claims != null && UserASP.Claims.Count > 1)
+                if (this.UserASP != null && this.UserASP.Claims != null && this.UserASP.Claims.Count > 1)
                 {
-                    return $"{UserASP.Claims[0].ClaimValue} {UserASP.Claims[1].ClaimValue}";
+                    return $"{this.UserASP.Claims[0].ClaimValue} {this.UserASP.Claims[1].ClaimValue}";
                 }
 
                 return null;
             }
         }
 
-
+        #endregion
 
 
         #region Singleton
@@ -58,13 +57,15 @@ namespace School.ViewModels
 
         #endregion
 
-        #region Singleton
+        #region Constructor
 
         public MainViewModel()
         {
 
             instance = this;
-            
+            this.LoadMenu();
+
+
 
         }
 
@@ -72,7 +73,31 @@ namespace School.ViewModels
         #endregion
 
         #region Methods
+        private void LoadMenu()
+        {
+            this.Menu = new ObservableCollection<MenuItemViewModel>();
 
+            this.Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_info",
+                PageName = "AboutPage",
+                Title = Languages.About,
+            });
+
+            this.Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_phonelink_setup",
+                PageName = "SetupPage",
+                Title = Languages.Setup,
+            });
+
+            this.Menu.Add(new MenuItemViewModel
+            {
+                Icon = "ic_exit_to_app",
+                PageName = "LoginPage",
+                Title = Languages.Exit,
+            });
+        }
         #endregion
 
 
