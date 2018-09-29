@@ -39,15 +39,15 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center"/>
 
-                <Button 
-                    x:Name="myNotesButton"
-                    BackgroundColor="Red"
-                    BorderRadius="23"
-                    HeightRequest="46"
-                    Text="Upload notes"
-                    TextColor="White"               
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Center"/>
+                <Button
+                    	BackgroundColor="Navy"
+                    	BorderRadius="23"
+                    	Command="{Binding AddUserTestCommand}"
+                    	HeightRequest="46"
+                    	HorizontalOptions="FillAndExpand"                    	
+                    	Text="{i18n:Translate UserName}"
+                    	TextColor="White"/>
+
                 <Button
                     	BackgroundColor="Navy"
                     	BorderRadius="23"

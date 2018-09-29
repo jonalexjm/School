@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Syncfusion.SfBusyIndicator.XForms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace School.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
-		}
+
+           
+        }
 	}
 }

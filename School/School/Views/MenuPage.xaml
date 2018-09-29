@@ -9,16 +9,17 @@
     <ContentPage.Content>
         <StackLayout
         	Padding="5">
-            <Image
-            	Source="noimage">
-            </Image>
+            <Image  
+                	HeightRequest="150"
+                	
+                    Source="NoUser"/>
             <Label
                 FontAttributes="Bold"
                 FontSize="Large"
                 HorizontalOptions="Center"
-                Text="care wuey"
-                TextColor="White">
-            </Label>
+                Text="{Binding UserFullName}"
+                TextColor="White"/>
+
             <ListView
             	ItemsSource="{Binding Menu}"
             	HasUnevenRows="True">

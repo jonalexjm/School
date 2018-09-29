@@ -2,6 +2,7 @@
 using School.Common.Models;
 using School.Helpers;
 using School.Services;
+using School.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -85,7 +86,19 @@ namespace School.ViewModels
         }
 
 
+        public ICommand AddUserTestCommand
+        {
+            get
+            {
+                return new RelayCommand(AddUserTest);
+            }
+        }
 
+        private async void AddUserTest()
+        {
+            MainViewModel.GetInstance().Register = new RegisterViewModel();
+            await App.Navigator.PushAsync(new RegisterPage());
+        }
 
 
         #endregion
@@ -93,8 +106,10 @@ namespace School.ViewModels
 
         #region methods
 
-        
-        
+
+
+
+
 
 
         #endregion

@@ -6,6 +6,7 @@ using School.Services;
 using School.Views;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Syncfusion.SfBusyIndicator.XForms;
 
 namespace School.ViewModels
 {
@@ -49,6 +50,11 @@ namespace School.ViewModels
             get;
             set;
         }
+
+        //codigo de prueba
+       
+
+        //codigo de prueba
 
         #endregion
 
