@@ -39,6 +39,21 @@ namespace School.ViewModels
             }
         }
 
+        public string UserImageFullPath
+        {
+            get
+            {
+                if (this.UserASP != null && this.UserASP.Claims != null && this.UserASP.Claims.Count > 1)
+                {
+                    return $"https://apischool2.azurewebsites.net{this.UserASP.Claims[3].ClaimValue.Substring(1)}";
+                }
+
+                return null;
+
+
+            }
+        }
+
         #endregion
 
 

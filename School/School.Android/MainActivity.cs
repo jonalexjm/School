@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Plugin.Permissions;
 using Plugin.CurrentActivity;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace School.Droid
 {
@@ -26,6 +27,7 @@ namespace School.Droid
 
             base.OnCreate(savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);// put a inits for begin use plugin
+            ImageCircleRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
