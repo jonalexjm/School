@@ -9,6 +9,6 @@ namespace School.Backend.Models
 {
     public class LocalDataContext : DataContext
     {
-
+        public System.Data.Entity.DbSet<School.Common.Models.User> Users { get; set; }
     }
 }

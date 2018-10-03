@@ -1,4 +1,5 @@
-﻿using System;
+﻿using School.Backend.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace School.Backend
     {
         protected void Application_Start()
         {
+            this.CheckRolesAndSuperUser();
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<Models.LocalDataContext, 
                 Migrations.Configuration>());
@@ -20,6 +22,13 @@ namespace School.Backend
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+        private void CheckRolesAndSuperUser()
+        {
+            UsersHelper.CheckRole("Admin");
+            UsersHelper.CheckRole("Student");
+            UsersHelper.CheckRole("Teacher");
+            UsersHelper.CheckSuperUser();
         }
     }
 }
