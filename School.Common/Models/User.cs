@@ -40,14 +40,32 @@
         [Display(Name = "Address")]
         public string Address { get; set; }
 
-        [Display(Name = "Image")]
-        public string Photo { get; set; }
-
+       
         [Display(Name = "Is Student")]
         public bool IsStudent { get; set; }
 
         [Display(Name = "Is Teacher")]
         public bool IsTeacher { get; set; }
+
+        [Display(Name = "Image")]
+        public string Photo { get; set; }
+
+        [Display(Name = "Image")]
+        public string ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Photo))
+                {
+                    return "noimage";
+                }
+
+                return string.Format(
+                    "http://landsapi1.azurewebsites.net/{0}",
+                    Photo.Substring(1));
+            }
+        }
+
 
 
 

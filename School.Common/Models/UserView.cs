@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace School.Common.Models
 {
@@ -21,5 +22,7 @@ namespace School.Common.Models
         [Compare("Password", ErrorMessage = "The password and confirm does not match")]
         [Display(Name = "Password confirm")]
         public string PasswordConfirm { get; set; }
+
+        public HttpPostedFileBase ImageFile { get; set; }
     }
 }

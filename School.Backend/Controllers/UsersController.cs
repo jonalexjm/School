@@ -54,8 +54,18 @@ namespace School.Backend.Controllers
         {
             if (ModelState.IsValid)
             {
-                
-                var user = this.ToUser(view);
+                var pic = string.Empty;
+                var folder = "~/Content/Users";
+
+                if (view.ImageFile != null)
+                {
+                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
+                    pic = $"{folder}/{pic}";
+                }
+
+
+
+                var user = this.ToUser(view, pic);
                 db.Users.Add(user);
                 await db.SaveChangesAsync();
                 
@@ -76,14 +86,14 @@ namespace School.Backend.Controllers
             return View(view);
         }
 
-        private User ToUser(UserView view)
+        private User ToUser(UserView view, string pic)
         {
             return new User
             {
                 UserName = view.UserName,
                
                 FirstName = view.FirstName,
-                Photo = view.Photo,
+                Photo = pic,
                 LastName = view.LastName,
                 Phone = view.Phone,
                 UserId = view.UserId,
@@ -104,7 +114,23 @@ namespace School.Backend.Controllers
             {
                 return HttpNotFound();
             }
-            return View(user);
+            var view = this.ToView(user);
+            return View(view);
+        }
+
+        private UserView ToView(User user)
+        {
+            return new UserView
+            {
+                UserName = user.UserName,
+                FirstName = user.FirstName,
+                Photo = user.Photo,
+                LastName = user.LastName,
+                Phone = user.Phone,
+                UserId = user.UserId,
+                IsStudent = user.IsStudent,
+                IsTeacher = user.IsTeacher,
+            };
         }
 
         // POST: Users/Edit/5
@@ -112,15 +138,26 @@ namespace School.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "UserId,UserName,FirstName,LastName,Phone,Address,Photo,IsStudent,IsTeacher")] User user)
+        public async Task<ActionResult> Edit(UserView view)
         {
             if (ModelState.IsValid)
             {
+                var pic = view.Photo;
+                var folder = "~/Content/Users";
+
+                if (view.ImageFile != null)
+                {
+                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
+                    pic = $"{folder}/{pic}";
+                }
+
+                var user = this.ToUser(view, pic);
+
                 db.Entry(user).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(user);
+            return View(view);
         }
 
         // GET: Users/Delete/5
