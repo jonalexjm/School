@@ -23,9 +23,11 @@
 
 
         [Display(Name = "First Name")]
+        [Required(ErrorMessage = "The field {0} is required")]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "The field {0} is required")]
         public string LastName { get; set; }
 
         [Display(Name = "Full Name")]
@@ -35,9 +37,11 @@
         }
 
         [Display(Name = "Phone")]
+        [Required(ErrorMessage = "The field {0} is required")]
         public string Phone { get; set; }
 
         [Display(Name = "Address")]
+        [Required(ErrorMessage = "The field {0} is required")]
         public string Address { get; set; }
 
        
