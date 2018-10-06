@@ -62,16 +62,12 @@
             @Html.DisplayFor(modelItem => item.IsTeacher)
         </td>
         <td>
-            @if (!string.IsNullOrEmpty(item.ImageFullPath))
-            {
-                <img src="@Url.Content(item.ImageFullPath)" alt="Image" style="width:100px;height:150px;max-width: 100%; height: auto;" />
-            }
-
+            @Html.DisplayFor(modelItem => item.Photo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.UserId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.UserId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.UserId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
         </td>
     </tr>
 }

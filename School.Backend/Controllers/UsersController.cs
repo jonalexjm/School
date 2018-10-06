@@ -9,7 +9,6 @@ using System.Web;
 using System.Web.Mvc;
 using School.Backend.Models;
 using School.Common.Models;
-using School.Backend.Helpers;
 
 namespace School.Backend.Controllers
 {
@@ -49,57 +48,16 @@ namespace School.Backend.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(UserView view)
+        public async Task<ActionResult> Create([Bind(Include = "UserId,UserName,FirstName,LastName,Phone,Address,IsStudent,IsTeacher,Photo")] User user)
         {
             if (ModelState.IsValid)
             {
-                var pic = string.Empty;
-                var folder = "~/Content/User";
-
-                if (view.ImageFile != null)
-                {
-                    pic = FilesHelper.UploadPhoto(view.ImageFile, folder);
-                    pic = $"{folder}/{pic}";
-                }
-
-                var user = this.ToUser(view, pic);
-
                 db.Users.Add(user);
                 await db.SaveChangesAsync();
-
-                if (view.IsStudent)
-                {
-                    //  UsersHelper.CreateUserASP(view.UserName, "Student", view.Password, view.FirstName, view.LastName, pic );
-                    UsersHelper.CreateUserASPClaim(view.UserName, "Student", view.Password, view.FirstName, view.LastName, pic);
-
-                }
-                if (view.IsTeacher)
-                {
-                    //UsersHelper.CreateUserASP(view.UserName, "Teacher", view.Password, view.FirstName, view.LastName, pic);
-                    UsersHelper.CreateUserASPClaim(view.UserName, "Teacher", view.Password, view.FirstName, view.LastName, pic);
-                }
-
-
-
                 return RedirectToAction("Index");
             }
 
-            return View(view);
-        }
-
-        private User ToUser(UserView view, string pic)
-        {
-            return new User
-            {
-                UserName = view.UserName,
-                FirstName = view.FirstName,
-                Photo = pic,
-                LastName = view.LastName,
-                Phone = view.Phone,
-                UserId = view.UserId,
-                IsStudent = view.IsStudent,
-                IsTeacher = view.IsTeacher,
-            };
+            return View(user);
         }
 
         // GET: Users/Edit/5
