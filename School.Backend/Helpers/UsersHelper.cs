@@ -109,7 +109,7 @@
             }
         }
 
-        public static Response CreateUserASPClaim(string email, string roleName, string password, string firstName, string lastName, string photo)
+        public static Response CreateUserASPClaim(string email, string password, string firstName, string lastName, string photo)
         {
             try
             {
